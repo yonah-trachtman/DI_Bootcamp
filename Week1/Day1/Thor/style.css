@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1{
+    position: absolute;
+    padding: 5vw;
+    top: 25vh;
+    font-size: 200px;
+    font-weight: bold;
+    width: 200%;
+    color: white;
+    letter-spacing: 10px;
+}
+
+p {
+    display: flexbox;
+    position: absolute;
+    padding: 5vw;
+    top: 63vh;
+    width: 70vw;
+    font-size: 20px;
+    color: white;
+    
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    height: 2vh;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+  .container{
+    position: relative;
+ }
+
+.backgroundImg {
+    width: 100%;
+    height: 96vh; 
+    position: absolute; 
+}
