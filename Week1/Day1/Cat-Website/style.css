@@ -1,0 +1,42 @@
+img {
+    border: 1vh solid #EB6734;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ul {
+    margin-left: 3vw;
+  }
+
+.catPic {
+    height: 40vh;
+    width: 50vw;
+}
+
+.lionPic {
+    height: 45vh;
+    width: 50vw;
+}
+
+.red {
+    border: 0.2vh solid red;
+    color: red;
+    text-align: center;
+    width: 68.3vw;
+    margin-left: 15.4vw;
+    font-weight: bold;
+}
+.center {
+    text-align: center;
+}
+.underline {
+    text-decoration: underline;
+    margin-left: 2vw;
+}
