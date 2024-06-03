@@ -1,2 +1,53 @@
+
+
+img {
+    height: 500px;
+    width: 450px;
+}
+
+button {
+    color: #7D7E7C;
+    background-color: white;
+    font-size: 20px;
+    padding: 15px;
+    font-weight: bold;
+}
+
 .products {
+    position: relative;
+    text-align: center;
+}
+.firstProduct{
+    position: absolute;
+    top: 30vh;
+    left: 7vw;
+}
+
+.secondProduct{
+    position: absolute;
+    top: 30vh;
+    left: 30vw;
+}
+
+.thirdProduct{
+    position: absolute;
+    top: 30vh;
+    left: 50vw;
+}
+
+.fourthProduct{
+    position: absolute;
+    top: 30vh;
+    left: 73vw;
+}
+
+.green{
+    color: green;
+    font-weight: bold;
+}
+
+.strikeOut {
+    text-decoration: line-through;
+    color: #8D8C8C;
+    font-size: 15px;
 }
