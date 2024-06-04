@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    height: fit-content;
+    width: fit-content;
+    border: 1px solid red;
+}
+
+.white {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+}
+
+.lightRed {
+    background-color: #E67F7E;
+    height: 50px;
+    width: 50px;
+}
+
+.darkRed {
+    background-color: #D83E3B;
+    height: 50px;
+    width: 50px;
+}
