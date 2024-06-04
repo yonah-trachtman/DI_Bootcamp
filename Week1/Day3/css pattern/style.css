@@ -1,0 +1,30 @@
+.outsideContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.insideContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.insideContainer > *{
+    margin: 20px;
+}
+
+.insideContainer2 {
+    display: flex;
+    align-self: center;
+}
+
+.insideContainer2 > * {
+    margin: 50px;
+}
+
+.yellowBox {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+}
