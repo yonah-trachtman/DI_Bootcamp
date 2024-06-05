@@ -3,79 +3,74 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>learn bootstrap</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light text-light bg-dark navbar-fixed-top">
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="#">Project Exercise #9</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">Contact<span class="badge badge-light">3</span></a>
-            </li>
-            <li>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-secondary" href="#">Project exercise #9</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-secondary" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" >Contact<span class="badge text-bg-secondary --bs-tertiary-color">3</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                </a>
+                <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-              </div> 
-               <li>
-                  <div class="login-container ml-auto align-items-right">
-                    <form class="" action="/action_page.php">
-                        <input type="email" placeholder="email" name="email">
-                      <input type="password" placeholder="Password" name="psw">
-                      <button class="btn btn-success" type="submit">Sign In</button>
-                    </form>
-                  </div>
-            </button>
               </li>
-            </li>
-          </ul>
-      </div>
-      
-    </nav>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="email" placeholder="Email" aria-label="Email">
+              <input class="form-control me-3" type="password" placeholder="Password" aria-label="Password">
+              <button class="btn btn-success" type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+      </nav>
       <div class="p-5 bg-light">
         <h1 class="mb-3">Hello, world!</h1>
-        <h4 class="mb-3">This is Exercise #9. it includes a large callout called a jumbotron and three supporting peices of content.</h4>
-        <a class="btn btn-primary mb-3" href="" role="button">Learn more</a>
+        <h4 class="mb-3">this os Exercise #9. It includes a large callout called a jumbotron and three supporting pieces of contact.</h4>
+        <a class="btn btn-primary" href="" role="button">Call to Learn more</a>
       </div>
     </header>
-
-
     <main>
-      <div class="container">
+      <div class="container text-center">
         <div class="row">
-          <div class="col-sm ">
-            <h1>heading</h1>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. nulla vitae elit libero, a pharetra augue. maecenas faucibus mollis interdum. donec ullamcorper nulla non metus auctor fringilla. donec id elit non mi porta gravida at eget metus. nulla vitae elit libero, a pharetra augue. vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-            <button> veiw details</button>
+          <div class="col">
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam lorem augue, eu dapibus odio congue sit amet. Sed ullamcorper lorem elit. Aliquam tempor lorem vel ultrices ornare. In convallis tristique enim, ut volutpat turpis posuere sed. Suspendisse aliquet pulvinar vestibulum. Integer facilisis tincidunt sem. Nam pharetra eu leo nec scelerisque. Etiam quis nulla sit amet erat tempus commodo rutrum sed diam. Cras sed volutpat erat. Phasellus sed massa vel tellus mollis bibendum in quis eros. Sed condimentum quam sapien, eget viverra tellus tincidunt at. Cras et ex tristique, pharetra enim sit amet, fringilla ligula. Phasellus vitae dolor nisi. </p>
+            <button type="button" class="btn btn-primary">Primary</button>
           </div>
-          <div class="col-sm">
-            <h1>heading</h1>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. nulla vitae elit libero, a pharetra augue. maecenas faucibus mollis interdum. donec ullamcorper nulla non metus auctor fringilla. donec id elit non mi porta gravida at eget metus. nulla vitae elit libero, a pharetra augue. vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-            <button> veiw details</button>
+          <div class="col">
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam lorem augue, eu dapibus odio congue sit amet. Sed ullamcorper lorem elit. Aliquam tempor lorem vel ultrices ornare. In convallis tristique enim, ut volutpat turpis posuere sed. Suspendisse aliquet pulvinar vestibulum. Integer facilisis tincidunt sem. Nam pharetra eu leo nec scelerisque. Etiam quis nulla sit amet erat tempus commodo rutrum sed diam. Cras sed volutpat erat. Phasellus sed massa vel tellus mollis bibendum in quis eros. Sed condimentum quam sapien, eget viverra tellus tincidunt at. Cras et ex tristique, pharetra enim sit amet, fringilla ligula. Phasellus vitae dolor nisi. </p>
+            <button type="button" class="btn btn-primary">Primary</button>
           </div>
-          <div class="col-sm">
-            <h1>heading</h1>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. nulla vitae elit libero, a pharetra augue. maecenas faucibus mollis interdum. donec ullamcorper nulla non metus auctor fringilla. donec id elit non mi porta gravida at eget metus. nulla vitae elit libero, a pharetra augue. vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-            <button> veiw details</button>
+          <div class="col">
+            <h1>Heading<span class="badge text-bg-info">New</span>
+            </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam lorem augue, eu dapibus odio congue sit amet. Sed ullamcorper lorem elit. Aliquam tempor lorem vel ultrices ornare. In convallis tristique enim, ut volutpat turpis posuere sed. Suspendisse aliquet pulvinar vestibulum. Integer facilisis tincidunt sem. Nam pharetra eu leo nec scelerisque. Etiam quis nulla sit amet erat tempus commodo rutrum sed diam. Cras sed volutpat erat. Phasellus sed massa vel tellus mollis bibendum in quis eros. Sed condimentum quam sapien, eget viverra tellus tincidunt at. Cras et ex tristique, pharetra enim sit amet, fringilla ligula. Phasellus vitae dolor nisi. </p>
+            <button type="button" class="btn btn-primary">Primary</button>
           </div>
         </div>
       </div>
