@@ -16,6 +16,7 @@
 .insideContainer2 {
     display: flex;
     align-self: center;
+    
 }
 
 .insideContainer2 > * {
@@ -27,4 +28,40 @@
     height: 100px;
     background-color: yellow;
     border: 1px solid black;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .insideContainer2 {
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .insideContainer2 > * {
+        margin: 20px;
+    }
+
+}
+
+
+@media only screen and (max-height: 1000px) {
+
+    .outsideContainer {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .insideContainer {
+        flex-direction: row;
+    }
+
+    .insideContainer > * {
+        margin: 50px;
+    }
+
+    .bottom {
+        justify-content: end;
+    }
+
 }
