@@ -24,6 +24,8 @@ figcaption {
     width: 80%;
 }
 
+
+
 article {
     display: flexbox;
     width: 30vw;
@@ -33,6 +35,20 @@ article {
 aside {
     display: flexbox;
     width: 30vw;
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #CFE2FF;
+    margin-top: 0px;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
 }
 
 .about {
@@ -61,14 +77,26 @@ aside {
     font-size: 2vh;
   }
 
-footer {
-    width: 100vw;
+.project {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    width: 75vw;
+    padding-bottom: 10%;
     align-items: center;
-    background-color: #CFE2FF;
-    margin-top: 0px;
 }
+
+
+.desc {
+    display: flexbox;
+    width: 10vw;
+}
+
+.portfolioImg {
+    width: 20vw;
+    height: 20vh;
+}
+
+
 
 .topBorder {
     height: 10vh;
