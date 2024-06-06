@@ -1,0 +1,33 @@
+
+
+main {
+    background-image: linear-gradient(lightblue, royalblue);
+}
+
+figure {
+    margin-bottom: 0px;
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #CFE2FF;
+    margin-top: 0px;
+}
+
+.topBorder {
+    height: 10vh;
+    background-color: white;
+}
+
+.footerContent {
+    border: 0.2vh solid #CFE2FF;
+}
+
+.links {
+    padding: 0.5vh;
+    margin-bottom: 0.2vh;
+    background-color: #CFE2FF;
+}
