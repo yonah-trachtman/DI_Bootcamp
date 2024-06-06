@@ -2,11 +2,64 @@
 
 main {
     background-image: linear-gradient(lightblue, royalblue);
+    color: #CFE2FF;
+}
+
+img {
+    height: 30vh;
+
 }
 
 figure {
     margin-bottom: 0px;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+figcaption {
+    font-size: large;
+    display: flexbox;
+    width: 80%;
+}
+
+article {
+    display: flexbox;
+    width: 30vw;
+    padding-left: 5vw;
+}
+
+aside {
+    display: flexbox;
+    width: 30vw;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro {
+    display: flexbox;
+    width: 50vw;
+}
+
+.skills {
+    display: grid;
+    grid: auto auto / auto auto;
+    grid-gap: 5vh;
+}
+
+.badge {
+    background-color: #74C0FC;
+    color: white;
+    padding: 0.5vh 1vw;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 2vh;
+  }
 
 footer {
     width: 100vw;
