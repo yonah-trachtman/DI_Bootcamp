@@ -1,6 +1,6 @@
 body{
     display: grid;
-    grid: auto auto  / auto auto auto auto;
+    grid: auto auto auto  / auto auto auto auto;
     grid-row-gap:  20%;;
 }
 
@@ -56,6 +56,12 @@ div {
 
 .border {
     background-color: black;
+}
+
+.grow {
+    background-color: #FF008C;
+    grid-column: 1 / span 4;
+    width: 100vw;
 }
 
 .fade:hover {
