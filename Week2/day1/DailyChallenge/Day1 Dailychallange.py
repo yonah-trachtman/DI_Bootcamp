@@ -17,6 +17,11 @@
 #     ... etc
 #     HelloWorld
 
+# 4. Bonus: Swap some characters around then print the newly jumbled string (hint: look into the shuffle method). For example:
+
+# Hlrolelwod
+import random
+
 
 userWord = input("Please enter a 10 letter word ")
 
@@ -31,3 +36,6 @@ else:
 
     for letter in range(1, len(userWord) + 1):
         print(userWord[0:letter])
+
+    userWordShuffled = "".join(random.sample(userWord, len(userWord)))
+    print(userWordShuffled)
