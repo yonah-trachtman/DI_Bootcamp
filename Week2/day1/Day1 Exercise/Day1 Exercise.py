@@ -9,7 +9,7 @@
 # Hello world
 
 # 
-print("Hello world\n " *4)
+print("Hello world\n" *4)
 
 
 # Exercise 2 : Some Math
@@ -35,7 +35,7 @@ print(99 ** 3 * 8)
 
 # >>> "3" > 3 Error
 
-# >>> "Hello" == "hello"
+# >>> "Hello" == "hello" False
 
 
 
