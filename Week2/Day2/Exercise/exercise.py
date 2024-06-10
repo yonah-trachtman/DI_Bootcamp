@@ -93,3 +93,24 @@ print(numbers)
 
 #     Use a for loop to print all numbers from 1 to 20, inclusive.
 #     Using a for loop, that loops from 1 to 20(inclusive), print out every element which has an even index.
+
+
+for i in range(1, 20 + 1):
+   print(i)
+
+for i in range(1, 20 + 1, 2):
+   print(i + 1)
+
+
+
+#    🌟 Exercise 6 : While Loop
+# Instructions
+
+#     Write a while loop that will continuously ask the user for their name, unless the input is equal to your name.
+
+
+lastName = input("Beep Boop I'm a robot, please give me your last name ")
+
+while lastName != "Trachtman":
+   
+   lastName = input("Beep Boop I'm a robot, please give me your last name ")
