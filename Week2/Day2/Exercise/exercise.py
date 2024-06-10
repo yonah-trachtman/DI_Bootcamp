@@ -116,12 +116,12 @@ for i in range(1, 20 + 1, 2):
 
 
 # CODE STARTS HERE!!!!
-# lastName = input("Beep Boop I'm a robot, please give me your last name ")
-# lastName = lastName.capitalize()
-# while lastName != "Trachtman":
+lastName = input("Beep Boop I'm a robot, please give me your last name ")
+lastName = lastName.capitalize()
+while lastName != "Trachtman":
    
-#    lastName = input("Beep Boop I'm a robot, please give me your last name ")
-#    lastName = lastName.capitalize()
+   lastName = input("Beep Boop I'm a robot, please give me your last name ")
+   lastName = lastName.capitalize()
 
 
 
@@ -137,18 +137,18 @@ for i in range(1, 20 + 1, 2):
 
 
 # CODE STARTS HERE!!!!
-# askForFruits = input("Please give me a list of fruits seperated by single spaces ")
+askForFruits = input("Please give me a list of fruits seperated by single spaces ")
 
-# chosenFruit = askForFruits.split()
+chosenFruit = askForFruits.split()
 
-# print(chosenFruit)
+print(chosenFruit)
 
-# checkForFruit = input("Choose ONE! fruit")
+checkForFruit = input("Choose ONE! fruit")
 
-# if checkForFruit in chosenFruit:
-#    print("You chose one of your favorite fruits! Enjoy!")
-# else:
-#    print("You chose a new fruit. I hope you enjoy")
+if checkForFruit in chosenFruit:
+   print("You chose one of your favorite fruits! Enjoy!")
+else:
+   print("You chose a new fruit. I hope you enjoy")
 
 
 # Exercise 8: Who ordered a pizza ?
@@ -159,18 +159,18 @@ for i in range(1, 20 + 1, 2):
 #     Upon exiting the loop print all the toppings on the pizza pie and what the total price is (10 + 2.5 for each topping).
 
 # CODE STARTS HERE!!!!
-# toppingsOnPizza = []
-# while True:
-#    topping = input("please provide a topping or if you have selected all the toppings you want type Quit ")
-#    topping = topping.capitalize()
-#    message = f"We will add {topping} to your pizza"
-#    if topping == "Quit":
-#       finalPrice = 10 + len(toppingsOnPizza) * 2.5
-#       print(f"Alright your pizza has {toppingsOnPizza}, and the final price will be {str(finalPrice)}")
-#       break
-#    else:
-#       print (message)
-#       toppingsOnPizza.append(topping)
+toppingsOnPizza = []
+while True:
+   topping = input("please provide a topping or if you have selected all the toppings you want type Quit ")
+   topping = topping.capitalize()
+   message = f"We will add {topping} to your pizza"
+   if topping == "Quit":
+      finalPrice = 10 + len(toppingsOnPizza) * 2.5
+      print(f"Alright your pizza has {toppingsOnPizza}, and the final price will be {str(finalPrice)}")
+      break
+   else:
+      print (message)
+      toppingsOnPizza.append(topping)
 
 
 
@@ -189,3 +189,87 @@ for i in range(1, 20 + 1, 2):
 #     A group of teenagers are coming to your movie theater and want to watch a movie that is restricted for people between the ages of 16 and 21.
 #     Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
 #     At the end, print the final list.
+
+
+# CODE STARTS HERE!!!!
+while True:
+    totalcost = 0
+    askAge = input("please submit your age ")
+
+    if askAge.isdigit() == True:
+       askAge = int(askAge)
+       if askAge < 3:
+        print("Ok that will be free")
+       elif askAge > 2 and askAge < 12:
+        print("Ok that will be $10")
+        totalcost += 10
+       elif askAge >= 12:
+        print("Ok that will be $15")
+        totalcost += 15
+    else:
+       print(f"Alright that's everything your total is ${totalcost}")
+       break
+
+
+
+listOfNames = ["Stacy", "Krim", "Albia", "Vic"]
+permitedNames = []
+
+for name in listOfNames:
+
+    teenagersAge = input(f" Hello {name}. Please input your age ")
+
+    if teenagersAge.isdigit() == True:
+       age = int(teenagersAge)
+
+       if age > 16 and age < 22:
+          print(f"alraight {name}. You are authorized to watch this movie")
+          permitedNames.append(name)
+       else:
+          print(f"Sorry {name}. You are not authorized to watch this movie")
+          
+    else:
+      print("If you do not give me your age I can not let you watch this movie")
+      
+
+print(f"here's who was allowed to veiw the film {permitedNames}")
+
+
+
+# Exercise 10 : Sandwich Orders
+# Instructions
+
+# Using the list below :
+
+# sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+
+#     The deli has run out of pastrami, use a while loop to remove all occurrences of “Pastrami sandwich” from sandwich_orders.
+#     We need to prepare the orders of the clients:
+#         Create an empty list called finished_sandwiches.
+#         One by one, remove each sandwich from the sandwich_orders while adding them to the finished_sandwiches list.
+#     After all the sandwiches have been made, print a message listing each sandwich that was made, such as:
+
+# I made your tuna sandwich
+# I made your avocado sandwich
+# I made your egg sandwich
+# I made your chicken sandwich
+
+# CODE STARTS HERE!!!!
+sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+finished_sandwiches = []
+pastrami = False
+
+while pastrami == False and "Pastrami sandwich" in sandwich_orders:
+      
+      sandwich_orders.remove("Pastrami sandwich")
+
+while len(sandwich_orders) > 0:
+    for sandwich in sandwich_orders:
+        finished_sandwiches.append(sandwich)
+        print(f"I made your {sandwich}")
+        sandwich_orders.remove(sandwich)
+
+print(sandwich_orders)
+print(finished_sandwiches)
+
+      
