@@ -74,4 +74,22 @@ print(basket)
 
 numbers = []
 
-for i in range
+for i in range(1, 6):
+    if i < 2 or i > 4:
+      numbers.append(i)
+    else:
+       numbers.append(i)
+       i += 0.5
+       numbers.append(i)
+
+
+
+print(numbers)
+
+
+
+# 🌟 Exercise 5: For Loop
+# Instructions
+
+#     Use a for loop to print all numbers from 1 to 20, inclusive.
+#     Using a for loop, that loops from 1 to 20(inclusive), print out every element which has an even index.
