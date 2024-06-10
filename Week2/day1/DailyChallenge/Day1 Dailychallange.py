@@ -32,7 +32,7 @@ elif len(userWord) > 10:
 else:
     print ("perfect string")
 
-    print(userWord[0] + userWord[9])
+    print(userWord[0] + userWord[-1])
 
     for letter in range(1, len(userWord) + 1):
         print(userWord[0:letter])
