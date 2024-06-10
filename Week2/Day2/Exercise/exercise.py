@@ -25,3 +25,53 @@ print(friend_fav_numbers)
 
 our_fav_numbers = my_fav_numbers.union(friend_fav_numbers)
 print(our_fav_numbers)
+
+
+
+
+# 🌟Exercise 2: Tuple
+# Instructions
+
+#     Given a tuple which value is integers, is it possible to add more integers to the tuple?
+
+# No
+
+
+
+# 🌟 Exercise 3: List
+# Instructions
+
+# Using this list basket = ["Banana", "Apples", "Oranges", "Blueberries"];
+
+#     Remove “Banana” from the list.
+#     Remove “Blueberries” from the list.
+#     Add “Kiwi” to the end of the list.
+#     Add “Apples” to the beginning of the list.
+#     Count how many apples are in the basket.
+#     Empty the basket.
+#     Print(basket)
+
+
+basket = ["Banana", "Apples", "Oranges", "Blueberries"]
+shelf = ["Kiwi", "Apples"]
+
+basket.pop(0)
+basket.remove("Blueberries")
+basket.extend(shelf)
+apples = basket.count("Apples")
+print(apples)
+print(basket)
+basket = []
+print(basket)
+
+
+# 🌟 Exercise 4: Floats
+# Instructions
+
+#     Recap – What is a float? What is the difference between an integer and a float? a float is any number that has a decimal place and an integer is a whole number
+#     Create a list containing the following sequence 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 (don’t hard-code the sequence).
+#     Can you think of another way to generate a sequence of floats?
+
+numbers = []
+
+for i in range
