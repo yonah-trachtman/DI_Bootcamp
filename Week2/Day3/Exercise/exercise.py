@@ -51,6 +51,140 @@ print(totalCost)
 
 
 
+# 🌟 Exercise 3: Zara
+# Instructions
+
+#     Here is some information about a brand.
+
+#     name: Zara 
+#     creation_date: 1975 
+#     creator_name: Amancio Ortega Gaona 
+#     type_of_clothes: men, women, children, home 
+#     international_competitors: Gap, H&M, Benetton 
+#     number_stores: 7000 
+#     major_color: 
+#         France: blue, 
+#         Spain: red, 
+#         US: pink, green
+
+
+
+#     2. Create a dictionary called brand which value is the information from part one (turn the info into keys and values).
+#     The values type_of_clothes and international_competitors should be a list. The value of major_color should be a dictionary.
+#     3. Change the number of stores to 2.
+#     4. Print a sentence that explains who Zaras clients are.
+#     5. Add a key called country_creation with a value of Spain.
+#     6. Check if the key international_competitors is in the dictionary. If it is, add the store Desigual.
+#     7. Delete the information about the date of creation.
+#     8. Print the last international competitor.
+#     9. Print the major clothes colors in the US.
+#     10. Print the amount of key value pairs (ie. length of the dictionary).
+#     11. Print the keys of the dictionary.
+#     12. Create another dictionary called more_on_zara with the following details:
+
+#     creation_date: 1975 
+#     number_stores: 10 000
+
+
+
+#     13. Use a method to add the information from the dictionary more_on_zara to the dictionary brand.
+#     14. Print the value of the key number_stores. What just happened ?
+
+
+# Code starts here!!!!
+store_info = {
+    "name": "Zara",
+    "creation_date": 1975,
+    "creator_name": "Amancio Ortega Gaona",
+    "type_of_clothes": ["men", "women", "children", "home"],
+    "international_competitors": ["Gap", "H&M", "Benetton"],
+    "number_stores": 7000,
+    "major_color": {
+        "France": ["blue"],
+        "Spain": ["red"], 
+        "US": ["pink", "green"]
+        },
+}
+
+more_on_zara = {
+
+}
+
+store_info["number_stores"] = 2
+print("a sentence that explains who Zaras clients are.")
+store_info["country_creation"] = "spain"
+if "international_competitors" in store_info:
+    store_info["international_competitors"].append("Desigual")
+del store_info["creation_date"]
+print(len(store_info))
+more_on_zara = dict(creation_date = 1975, number_stores = 10000)
+store_info.update(more_on_zara)
+print(store_info["number_stores"])
+
+
+
+# Exercise 4 : Disney characters
+# Instructions
+
+# Use this list :
+
+# users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
+
+# Analyse these results :
+
+# #1/
+
+# >>> print(disney_users_A)
+# {"Mickey": 0, "Minnie": 1, "Donald": 2, "Ariel": 3, "Pluto": 4}
+
+# #2/
+
+# >>> print(disney_users_B)
+# {0: "Mickey",1: "Minnie", 2: "Donald", 3: "Ariel", 4: "Pluto"}
+
+# #3/ 
+
+# >>> print(disney_users_C)
+# {"Ariel": 0, "Donald": 1, "Mickey": 2, "Minnie": 3, "Pluto": 4}
+
+
+#     Use a for loop to recreate the 1st result. Tip : don’t hardcode the numbers.
+#     Use a for loop to recreate the 2nd result. Tip : don’t hardcode the numbers.
+#     Use a method to recreate the 3rd result. Hint: The 3rd result is sorted alphabetically.
+#     Only recreate the 1st result for:
+#         The characters, which names contain the letter “i”.
+#         The characters, which names start with the letter “m” or “p”.
+
+# Code starts here!!!!
+users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
+disney_users_A = {}
+disney_users_B = {}
+disney_users_C = {}
+disney_users_D = {}
+disney_users_E = {}
+
+for item in users:
+    disney_users_A[item] = users.index(item)
+print(disney_users_A)
+for item in users:
+    disney_users_B[users.index(item)] = item
+print(disney_users_B)
+newList = sorted(users)
+for item in newList:
+    disney_users_C[item] = newList.index(item)
+print(disney_users_C)
+
+
+for item in users:
+    if "i" in item:
+     disney_users_D[item] = users.index(item)
+print(disney_users_D)
+
+
+for item in users:
+    if item.startswith("M") or item.startswith("P"):
+     disney_users_E[item] = users.index(item)
+print(disney_users_E)
 
 
 
