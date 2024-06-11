@@ -73,7 +73,7 @@ for key in items_purchase:
 
 for key in items_purchase:
     items_purchase[key] = int(items_purchase[key])
-    if items_purchase[key] <= wallet:
+    if items_purchase[key] < wallet:
         avalible.append(key)
 if len(avalible) == 0:
     print("Nothing")
