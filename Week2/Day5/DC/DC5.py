@@ -10,14 +10,12 @@
 # Then, the output should be: bag,hello,without,world
 
 
+# Code starts here!!!!
 userInput = input("please give me a string of words seperated by commas ")
-
 
 listOfWords = userInput.split(",")
 
 listOfWords.sort()
-
-
 
 print(",".join(listOfWords))
 
@@ -38,4 +36,17 @@ print(",".join(listOfWords))
 # longest_word("Forgetfulness is by all means powerless!") ➞ "Forgetfulness"
 
 
-def longestWordFinder(string)
+# Code starts here!!!!
+def longestWordFinder(words):
+    wordLength = 0
+    currentLongest = ""
+    splitToList = words.split(" ")
+    for word in splitToList:
+        if len(word) > wordLength:
+            wordLength = len(word)
+            currentLongest = word
+        else:
+            continue
+    print(f"The longest word in this sentance is {currentLongest}")
+
+longestWordFinder("Margaret's toy is a pretty doll.")

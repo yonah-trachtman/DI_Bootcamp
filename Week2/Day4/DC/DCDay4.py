@@ -53,12 +53,15 @@
 #                     #t%
 #                     ^r!
 #                     '''
+# matrixList = []
+
+# Code starts here!!!!
 sampleMatrix = [
     ["7", "T", "h", "i", "s", "$", "#", "^"],
     ["i", "s", "%", " ", "M", "a", "t", "r"],
     ["i", "x", "?", "#", " ", " ", "%", "!"]]
 
-# matrixList = []
+
 
 
 
