@@ -82,6 +82,7 @@ def matrixSolve(matrix):
             else:
                 message.append(" ")
             prev += 1
-    print("".join(message))
+    decoded = "".join(message)
+    print(decoded.strip())
 
 matrixSolve(sampleMatrix)
