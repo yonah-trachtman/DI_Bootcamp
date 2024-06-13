@@ -1,3 +1,5 @@
+import random
+
 # Exercise 1 : What are you learning ?
 # Instructions
 
@@ -43,3 +45,29 @@ favorite_book("Feet of Clay")
 #     For example “Reykjavik is in Iceland”
 #     Give the country parameter a default value.
 #     Call your function.
+
+
+
+# Code starts here!!!!
+def describe_city(city, country = "israel"):
+    print(f"{city} is in {country}")
+
+
+describe_city("Maalot")
+
+
+
+# Exercise 4 : Random
+# Instructions
+
+#     Create a function that accepts a number between 1 and 100 and generates another number randomly between 1 and 100. Use the random module.
+#     Compare the two numbers, if it’s the same number, display a success message, otherwise show a fail message and display both numbers.
+
+
+# Code starts here!!!!
+def numberGame(PlayerNum = 1):
+   comNumber = random.randint(1, 100)
+   if PlayerNum > comNumber:
+       return f"You got {PlayerNum} and the Computer got {comNumber} You win"
+   else:
+       return f"You got {PlayerNum} and the Computer got {comNumber} You lose"
