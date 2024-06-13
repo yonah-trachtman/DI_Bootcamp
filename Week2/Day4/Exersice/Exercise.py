@@ -122,3 +122,160 @@ print(make_shirt(text = "Fleem", size = "XXXXXL"))
 # Code starts here!!!!
 magician_names = ["Harry Houdini", "David Blaine", "Criss Angel"]
 
+def show_magicians():
+    for name in magician_names:
+        print(name)
+
+def make_great():
+    for i in range(len(magician_names)):
+        magician_names[i] += " the Great"
+
+show_magicians()
+make_great()
+show_magicians()
+
+
+
+# 🌟 Exercise 7 : Temperature Advice
+# Instructions
+
+#     Create a function called get_random_temp().
+#         This function should return an integer between -10 and 40 degrees (Celsius), selected at random.
+#         Test your function to make sure it generates expected results.
+
+#     Create a function called main().
+#         Inside this function, call get_random_temp() to get a temperature, and store its value in a variable.
+#         Inform the user of the temperature in a friendly message, eg. “The temperature right now is 32 degrees Celsius.”
+
+#     Let’s add more functionality to the main() function. Write some friendly advice relating to the temperature:
+#         below zero (eg. “Brrr, that’s freezing! Wear some extra layers today”)
+#         between zero and 16 (eg. “Quite chilly! Don’t forget your coat”)
+#         between 16 and 23
+#         between 24 and 32
+#         between 32 and 40
+
+#     Change the get_random_temp() function:
+#         Add a parameter to the function, named ‘season’.
+#         Inside the function, instead of simply generating a random number between -10 and 40, set lower and upper limits based on the season, eg. if season is ‘winter’, temperatures should only fall between -10 and 16.
+#         Now that we’ve changed get_random_temp(), let’s change the main() function:
+#             Before calling get_random_temp(), we will need to decide on a season, so that we can call the function correctly. Ask the user to type in a season - ‘summer’, ‘autumn’ (you can use ‘fall’ if you prefer), ‘winter’, or ‘spring’.
+#             Use the season as an argument when calling get_random_temp().
+
+#     Bonus: Give the temperature as a floating-point number instead of an integer.
+#    
+
+
+# Code starts here!!!!
+def get_random_temp(season = "Spring"):
+    if season == "Winter":
+      return round(random.uniform(-10, 16), 2)
+    elif season == "Summer":
+      return round(random.uniform(25, 40), 2)
+    elif season == "Fall" or season == "Autumn":
+      return round(random.uniform(0, 25), 2)
+    else:
+      return round(random.uniform(10, 30), 2)
+
+
+def main():
+    temp = get_random_temp(input("please give me a season? (if you don't put in a season it will default to spring also be sure to captilize)"))
+    if temp < 0:
+        print(f"The temperature right now is {temp} degrees Celsius. Brrr, that’s freezing! Wear some extra layers today")
+    elif temp >= 0 and temp < 17:
+        print(f"The temperature right now is {temp} degrees Celsius. Quite chilly! Don’t forget your coat")
+    elif temp > 15 and temp < 24:
+        print(f"The temperature right now is {temp} degrees Celsius. What lovely whether for this time of year")
+    elif temp > 23 and temp < 33:
+        print(f"The temperature right now is {temp} degrees Celsius. Oof it's really a scorcher")
+    else:
+        print(f"The temperature right now is {temp} degrees Celsius. SIZZLE!")
+
+main()
+
+
+
+# 🌟 Exercise 8 : Star Wars Quiz
+# Instructions
+
+# This project allows users to take a quiz to test their Star Wars knowledge.
+# The number of correct/incorrect answers are tracked and the user receives different messages depending on how well they did on the quiz.
+
+# Here is an array of dictionaries, containing those questions and answers
+
+# data = [
+#     {
+#         "question": "What is Baby Yoda's real name?",
+#         "answer": "Grogu"
+#     },
+#     {
+#         "question": "Where did Obi-Wan take Luke after his birth?",
+#         "answer": "Tatooine"
+#     },
+#     {
+#         "question": "What year did the first Star Wars movie come out?",
+#         "answer": "1977"
+#     },
+#     {
+#         "question": "Who built C-3PO?",
+#         "answer": "Anakin Skywalker"
+#     },
+#     {
+#         "question": "Anakin Skywalker grew up to be who?",
+#         "answer": "Darth Vader"
+#     },
+#     {
+#         "question": "What species is Chewbacca?",
+#         "answer": "Wookiee"
+#     }
+# ]
+
+
+#     Create a function that asks the questions to the user, and check his answers. Track the number of correct, incorrect answers. Create a list of wrong_answers
+#     Create a function that informs the user of his number of correct/incorrect answers.
+
+
+# Code starts here!!!!
+data = [
+    {
+        "question": "What is Baby Yoda's real name?",
+        "answer": "Grogu"
+    },
+    {
+        "question": "Where did Obi-Wan take Luke after his birth?",
+        "answer": "Tatooine"
+    },
+    {
+        "question": "What year did the first Star Wars movie come out?",
+        "answer": "1977"
+    },
+    {
+        "question": "Who built C-3PO?",
+        "answer": "Anakin Skywalker"
+    },
+    {
+        "question": "Anakin Skywalker grew up to be who?",
+        "answer": "Darth Vader"
+    },
+    {
+        "question": "What species is Chewbacca?",
+        "answer": "Wookiee"
+    }
+]
+
+wrongAnswers = []
+rightAnswers = []
+
+def starWarsQuiz():
+    print("Welcome to the star wars quiz please remember all answers must be capitilized")
+    for topic in data:
+        userAnswer = input(topic["question"])
+        if userAnswer == topic["answer"]:
+            print("that's correct")
+            rightAnswers.append(userAnswer)
+        else:
+            print("sorry that's wrong")
+            wrongAnswers.append(userAnswer)
+        
+    print(f"you got {len(rightAnswers)} questions right and {len(wrongAnswers)} questions wrong")
+
+starWarsQuiz()
