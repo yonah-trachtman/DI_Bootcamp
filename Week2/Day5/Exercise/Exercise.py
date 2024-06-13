@@ -29,7 +29,12 @@ def player_input(player):
 
 def check_win():
     winner = ""
-    if all(i == topRow[0] for i in topRow) or all(i == middleRow[0] for i in middleRow) or all(i == bottomRow[0] for i in bottomRow):
+    if all(i == topRow[0] for i in topRow):
+        winner = topRow[0]
+        gameInProgress = False
+    elif all(i == middleRow[0] for i in middleRow):
+        gameInProgress = False
+    elif all(i == bottomRow[0] for i in bottomRow):
         gameInProgress = False
     elif topRow[0] == middleRow[0] and topRow[0] == bottomRow[0] and bottomRow[0] == middleRow[0]:
         gameInProgress = False
