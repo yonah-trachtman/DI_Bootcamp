@@ -49,7 +49,7 @@ favorite_book("Feet of Clay")
 
 
 # Code starts here!!!!
-def describe_city(city, country = "israel"):
+def describe_city(city, country = "Israel"):
     print(f"{city} is in {country}")
 
 
@@ -77,4 +77,48 @@ numberGame()
 
 
 
+
+# 🌟 Exercise 5 : Let’s create some personalized shirts !
+# Instructions
+
+#     Write a function called make_shirt() that accepts a size and the text of a message that should be printed on the shirt.
+#     The function should print a sentence summarizing the size of the shirt and the message printed on it, such as "The size of the shirt is <size> and the text is <text>"
+#     Call the function make_shirt().
+
+#     Modify the make_shirt() function so that shirts are large by default with a message that reads “I love Python” by default.
+#     Call the function, in order to make a large shirt with the default message
+#     Make medium shirt with the default message
+#     Make a shirt of any size with a different message.
+
+#     Bonus: Call the function make_shirt() using keyword arguments.
+
+
+# Code starts here!!!!
+def make_shirt(size = "L", text = "I love Python"):
+    return f"The size of the shirt is {size} and the text is {text}"
+
+print(make_shirt())
+print(make_shirt("M"))
+print(make_shirt(text = "Fleem"))
+print(make_shirt(text = "Fleem", size = "XXXXXL"))
+
+
+
+
+# 🌟 Exercise 6 : Magicians …
+# Instructions
+
+# Using this list of magician’s names
+
+# magician_names = ['Harry Houdini', 'David Blaine', 'Criss Angel']
+
+#     Create a function called show_magicians(), which prints the name of each magician in the list.
+#     Write a function called make_great() that modifies the original list of magicians by adding the phrase "the Great" to each magician’s name.
+#     Call the function make_great().
+#     Call the function show_magicians() to see that the list has actually been modified.
+
+
+
+# Code starts here!!!!
+magician_names = ["Harry Houdini", "David Blaine", "Criss Angel"]
 
