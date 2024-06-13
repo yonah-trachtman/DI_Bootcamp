@@ -65,9 +65,16 @@ describe_city("Maalot")
 
 
 # Code starts here!!!!
-def numberGame(PlayerNum = 1):
+def numberGame(PlayerNum = random.randint(1, 100)):
    comNumber = random.randint(1, 100)
    if PlayerNum > comNumber:
-       return f"You got {PlayerNum} and the Computer got {comNumber} You win"
+       print (f"You got {PlayerNum} and the Computer got {comNumber} You win")
    else:
-       return f"You got {PlayerNum} and the Computer got {comNumber} You lose"
+       print (f"You got {PlayerNum} and the Computer got {comNumber} You lose")
+   
+
+numberGame()
+
+
+
+
