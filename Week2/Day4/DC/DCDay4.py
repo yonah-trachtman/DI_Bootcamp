@@ -69,15 +69,19 @@ sampleMatrix = [
 
 
 def matrixSolve(matrix):
+    prev = 0
     message = []
     for column in matrix:
         for i, ele in enumerate(column):
             if ele.isalpha() == True:
                 message.append(ele)
-            elif column.index(ele) == 0 or message[i - 1] == " ":
+            elif column.index(ele) == 0:
+                continue
+            elif message[prev - 1] == " ":
                 continue
             else:
                 message.append(" ")
-    print(message)
+            prev += 1
+    print("".join(message))
 
 matrixSolve(sampleMatrix)

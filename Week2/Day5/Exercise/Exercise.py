@@ -9,6 +9,7 @@
 
 
 # code starts here!!!!
+gameInProgress = True
 
 topRow = ["-","-","-"]
 middleRow = ["-","-","-"]
@@ -22,8 +23,10 @@ def displayBoard():
 
 def player_input(player):
     column = input(f"{player} player which column do you want to place in? ")
-    row = input("and what row do you want to put it in? ")
+    row = input("and what row do you want to place in? ")
 
 
 
 def check_win():
+    if all(i == topRow[0] for i in topRow) or all(i == middleRow[0] for i in middleRow) or all(i == bottomRow[0] for i in bottomRow):
+        gameInProgress = False
