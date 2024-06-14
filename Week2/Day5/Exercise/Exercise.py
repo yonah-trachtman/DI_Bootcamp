@@ -9,42 +9,64 @@
 
 
 # code starts here!!!!
-gameInProgress = True
 
-topRow = ["-","-","-"]
-middleRow = ["-","-","-"]
-bottomRow = ["-","-","-"]
+
+board = '''
+           ***************
+           *  0 | 1 | 2  *
+           * ---|---|--- *  
+           *  3 | 4 | 5  *
+           * ---|---|--- *
+           *  6 | 7 | 8  *
+           ***************'
+           '''
+trackBoard = {}
 
 def displayBoard():
-    print(topRow)
-    print(middleRow)
-    print(bottomRow)
+    print(board)
 
 
-def player_input(player):
-    column = input(f"{player} player which column do you want to place in? ")
-    row = input("and what row do you want to place in? ")
+def updateBoard(player, position):
+    global board
+    for i in board:
+        if i == position:
+            trackBoard[position] = player
+            board = board.replace(position, player)
+
+def gameOver(player):
+    if "0" in trackBoard and "1" in trackBoard and "2" in trackBoard:
+        if trackBoard["0"] == player and trackBoard["1"] == player and trackBoard["2"] == player:
+            return f"{player} wins"
+    if "3" in trackBoard and "4" in trackBoard and "5" in trackBoard:
+        if trackBoard["3"] == player and trackBoard["4"] == player and trackBoard["5"] == player:
+            return f"{player} wins"
+    if "6" in trackBoard and "7" in trackBoard and "8" in trackBoard:
+        if trackBoard["6"] == player and trackBoard["7"] == player and trackBoard["8"] == player:
+            return f"{player} wins"
+    if "0" in trackBoard and "3" in trackBoard and "6" in trackBoard:
+        if trackBoard["0"] == player and trackBoard["3"] == player and trackBoard["6"] == player:
+            return f"{player} wins"
+    if "1" in trackBoard and "4" in trackBoard and "7" in trackBoard:
+        if trackBoard["1"] == player and trackBoard["4"] == player and trackBoard["7"] == player:
+            return f"{player} wins"
+    if "2" in trackBoard and "5" in trackBoard and "8" in trackBoard:
+        if trackBoard["2"] == player and trackBoard["5"] == player and trackBoard["8"] == player:
+            return f"{player} wins"
+    if "0" in trackBoard and "4" in trackBoard and "8" in trackBoard:
+        if trackBoard["0"] == player and trackBoard["4"] == player and trackBoard["8"] == player:
+            return f"{player} wins"
+    if "2" in trackBoard and "4" in trackBoard and "6" in trackBoard:
+        if trackBoard["2"] == player and trackBoard["4"] == player and trackBoard["6"] == player:
+            return f"{player} wins"
+    elif len(trackBoard) == 9:
+           return "it's a draw"
+    else:
+        return "Keep playing"
 
 
-
-def check_win():
-    winner = ""
-    if all(i == topRow[0] for i in topRow):
-        winner = topRow[0]
-        gameInProgress = False
-    elif all(i == middleRow[0] for i in middleRow):
-        gameInProgress = False
-    elif all(i == bottomRow[0] for i in bottomRow):
-        gameInProgress = False
-    elif topRow[0] == middleRow[0] and topRow[0] == bottomRow[0] and bottomRow[0] == middleRow[0]:
-        gameInProgress = False
-    elif topRow[1] == middleRow[1] and topRow[1] == bottomRow[1] and bottomRow[1] == middleRow[1]:
-        gameInProgress = False
-    elif topRow[2] == middleRow[2] and topRow[2] == bottomRow[2] and bottomRow[2] == middleRow[2]:
-        gameInProgress = False
-    elif topRow[0] == middleRow[1] and topRow[0] == bottomRow[2] and bottomRow[2] == middleRow[1]:
-        gameInProgress = False
-    elif topRow[2] == middleRow[1] and topRow[2] == bottomRow[0] and bottomRow[0] == middleRow[1]:
-        gameInProgress = False
-
-    
+def playGame():
+    gameOn = True
+    player = 'X'
+    while gameOn == True:
+        displayBoard()
+        playerInput = input("Choose a ")
