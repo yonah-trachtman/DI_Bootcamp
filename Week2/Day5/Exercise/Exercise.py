@@ -22,6 +22,7 @@ board = '''
            '''
 trackBoard = {}
 
+
 def displayBoard():
     print(board)
 
@@ -33,40 +34,66 @@ def updateBoard(player, position):
             trackBoard[position] = player
             board = board.replace(position, player)
 
+
+
 def gameOver(player):
+    if len(trackBoard) == 9:
+        return 2
     if "0" in trackBoard and "1" in trackBoard and "2" in trackBoard:
         if trackBoard["0"] == player and trackBoard["1"] == player and trackBoard["2"] == player:
-            return f"{player} wins"
+            return 1
     if "3" in trackBoard and "4" in trackBoard and "5" in trackBoard:
         if trackBoard["3"] == player and trackBoard["4"] == player and trackBoard["5"] == player:
-            return f"{player} wins"
+            return 1
     if "6" in trackBoard and "7" in trackBoard and "8" in trackBoard:
         if trackBoard["6"] == player and trackBoard["7"] == player and trackBoard["8"] == player:
-            return f"{player} wins"
+            return 1
     if "0" in trackBoard and "3" in trackBoard and "6" in trackBoard:
         if trackBoard["0"] == player and trackBoard["3"] == player and trackBoard["6"] == player:
-            return f"{player} wins"
+            return 1
     if "1" in trackBoard and "4" in trackBoard and "7" in trackBoard:
         if trackBoard["1"] == player and trackBoard["4"] == player and trackBoard["7"] == player:
-            return f"{player} wins"
+            return 1
     if "2" in trackBoard and "5" in trackBoard and "8" in trackBoard:
         if trackBoard["2"] == player and trackBoard["5"] == player and trackBoard["8"] == player:
-            return f"{player} wins"
+            return 1
     if "0" in trackBoard and "4" in trackBoard and "8" in trackBoard:
         if trackBoard["0"] == player and trackBoard["4"] == player and trackBoard["8"] == player:
-            return f"{player} wins"
+            return 1
     if "2" in trackBoard and "4" in trackBoard and "6" in trackBoard:
         if trackBoard["2"] == player and trackBoard["4"] == player and trackBoard["6"] == player:
-            return f"{player} wins"
-    elif len(trackBoard) == 9:
-           return "it's a draw"
+            return 1
     else:
-        return "Keep playing"
+        return 0
 
 
 def playGame():
     gameOn = True
     player = 'X'
+    gameOutcome = 0
+    displayBoard()
     while gameOn == True:
+        playerInput = input(f"it's {player}'s turn. Choose a space by the number: ")
+        if playerInput.isdigit() == True and len(playerInput) == 1:
+            updateBoard(player, playerInput)
+        else:
+            print("sorry that's not a valid number")
+            continue
         displayBoard()
-        playerInput = input("Choose a ")
+        gameOutcome = gameOver(player)
+        if gameOutcome == 1:
+            gameOn = False
+            print(f"{player} is the winner")
+        elif gameOutcome == 2:
+            gameOn = False
+            print("it's a draw")
+        else:
+            if player == "X":
+                player = "O"
+            else:
+                player = "X"
+
+
+
+
+playGame()
