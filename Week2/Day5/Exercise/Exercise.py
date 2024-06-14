@@ -73,13 +73,16 @@ def playGame():
     gameOutcome = 0
     displayBoard()
     while gameOn == True:
+        # get player's input and make sure it's vallid
         playerInput = input(f"it's {player}'s turn. Choose a space by the number: ")
-        if playerInput.isdigit() == True and len(playerInput) == 1:
+        if playerInput.isdigit() == True and len(playerInput) == 1 and playerInput != 9:
             updateBoard(player, playerInput)
         else:
             print("sorry that's not a valid number")
             continue
+        # show the board after a move 
         displayBoard()
+        # check to see if some one has won or the game's a draw
         gameOutcome = gameOver(player)
         if gameOutcome == 1:
             gameOn = False
@@ -87,6 +90,7 @@ def playGame():
         elif gameOutcome == 2:
             gameOn = False
             print("it's a draw")
+        # if not continue the game
         else:
             if player == "X":
                 player = "O"
