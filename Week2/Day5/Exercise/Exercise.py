@@ -37,9 +37,7 @@ def updateBoard(player, position):
 
 
 def gameOver(player):
-    if " " in trackBoard.values() != True:
-        return 0
-    elif trackBoard["0"] == player and trackBoard["1"] == player and trackBoard["2"] == player:
+    if trackBoard["0"] == player and trackBoard["1"] == player and trackBoard["2"] == player:
         return 1
     elif trackBoard["3"] == player and trackBoard["4"] == player and trackBoard["5"] == player:
         return 1
@@ -55,6 +53,8 @@ def gameOver(player):
         return 1
     elif trackBoard["2"] == player and trackBoard["4"] == player and trackBoard["6"] == player:
         return 1
+    elif " " in trackBoard.values() != True:
+        return 0
     else:
         return 2
 
