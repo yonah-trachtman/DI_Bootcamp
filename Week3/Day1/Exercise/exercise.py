@@ -171,33 +171,33 @@ class Zoo:
 
 
 def main():
-    # exercise1
-    # catBaruthiel = Cat("Baruthiel", 12)
-    # catWrestle = Cat("Wrestle", 24)
-    # catWillow = Cat("Willow", 30)
-    # catList = [catBaruthiel, catWrestle, catWillow]
-    # oldestCat = findCat(catList)
-    # print(f"The oldest cat is {oldestCat.name}, and is {oldestCat.age} years old")
+    exercise1
+    catBaruthiel = Cat("Baruthiel", 12)
+    catWrestle = Cat("Wrestle", 24)
+    catWillow = Cat("Willow", 30)
+    catList = [catBaruthiel, catWrestle, catWillow]
+    oldestCat = findCat(catList)
+    print(f"The oldest cat is {oldestCat.name}, and is {oldestCat.age} years old")
 
     # exercise2
-    # davidsDog = Dog("Rex", 50)
-    # sarahsDog = Dog("Teacup", 20)
-    # introduceDog(davidsDog)
-    # davidsDog.bark()
-    # davidsDog.jump()
-    # introduceDog(sarahsDog)
-    # sarahsDog.bark()
-    # sarahsDog.jump()
+    davidsDog = Dog("Rex", 50)
+    sarahsDog = Dog("Teacup", 20)
+    introduceDog(davidsDog)
+    davidsDog.bark()
+    davidsDog.jump()
+    introduceDog(sarahsDog)
+    sarahsDog.bark()
+    sarahsDog.jump()
 
-    # if sarahsDog.height > davidsDog.height:
-    #     print(f"{sarahsDog.name} is {sarahsDog.height} cm, and {davidsDog.name} is {davidsDog.height} cm. {sarahsDog.name} is bigger")
-    # else:
-    #     print(f"{davidsDog.name} is {davidsDog.height} cm, and {sarahsDog.name} is {sarahsDog.height} cm. {davidsDog.name} is bigger")
+    if sarahsDog.height > davidsDog.height:
+        print(f"{sarahsDog.name} is {sarahsDog.height} cm, and {davidsDog.name} is {davidsDog.height} cm. {sarahsDog.name} is bigger")
+    else:
+        print(f"{davidsDog.name} is {davidsDog.height} cm, and {sarahsDog.name} is {sarahsDog.height} cm. {davidsDog.name} is bigger")
 
 
     # exercise3
-    # stairway = Song(["There’s a lady who's sure", "all that glitters is gold", "and she’s buying a stairway to heaven"])
-    # stairway.singMeASong()
+    stairway = Song(["There’s a lady who's sure", "all that glitters is gold", "and she’s buying a stairway to heaven"])
+    stairway.singMeASong()
 
 
     # exercise4
