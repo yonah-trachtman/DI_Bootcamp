@@ -148,7 +148,7 @@ class Zoo:
 
     def sortAnimals(self) -> None:
 
-        self.animals.sort
+        self.animals.sort()
         for animal in self.animals:
             if animal[0] in self.dictonary:
                 self.dictonary[animal[0]].append(animal) 
@@ -171,7 +171,7 @@ class Zoo:
 
 
 def main():
-    exercise1
+    # exercise1
     catBaruthiel = Cat("Baruthiel", 12)
     catWrestle = Cat("Wrestle", 24)
     catWillow = Cat("Willow", 30)
@@ -205,11 +205,11 @@ def main():
 
     ramatGanZoo.addAnimal("Ape")
     ramatGanZoo.addAnimal("Baboon")
+    ramatGanZoo.addAnimal("Emu")
     ramatGanZoo.addAnimal("Bear")
     ramatGanZoo.addAnimal("Cat")
     ramatGanZoo.addAnimal("Cougar")
     ramatGanZoo.addAnimal("Eel")
-    ramatGanZoo.addAnimal("Emu")
     ramatGanZoo.sellAnimals("dragon")
     ramatGanZoo.addAnimal("Dragon")
     ramatGanZoo.addAnimal("Dragon")
