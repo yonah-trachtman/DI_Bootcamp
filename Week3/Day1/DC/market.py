@@ -75,7 +75,7 @@ class Farm:
             print(animal_list.index(animal))
             print(len(animal_list) - 1)
             if animal_list.index(animal) < len(animal_list) - 1:
-                animal += ","
+                animal_list[animal_list.index(animal)] += ","
         animal_list.insert(-1, "and")
         with_and = " ".join(animal_list)
         print(f"{self.name}’s farm has {with_and}.")
