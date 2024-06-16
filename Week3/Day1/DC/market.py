@@ -56,7 +56,29 @@ class Farm:
         for key, value in self.animals.items():
             print(f"{key}: {value}")
         return "\n     E-I-E-I-0!"
+    
+    
+    def get_animal_types(self) -> list:
+        sorted_animals = []
+        for animal in self.animals.keys():
+            sorted_animals.append(animal)
+            sorted_animals.sort()
+        return sorted_animals
 
+    def get_short_info(self, animal_list: list) -> None:
+        i = 0
+        for value in self.animals.values():
+                if value > 1:
+                    animal_list[i] += "s"
+                    i += 1
+        for animal in animal_list:
+            print(animal_list.index(animal))
+            print(len(animal_list) - 1)
+            if animal_list.index(animal) < len(animal_list) - 1:
+                animal += ","
+        animal_list.insert(-1, "and")
+        with_and = " ".join(animal_list)
+        print(f"{self.name}’s farm has {with_and}.")
 
 
 
@@ -73,7 +95,7 @@ def main():
     macdonald.add_animal('sheep')
     macdonald.add_animal('goat', 12)
     print(macdonald.get_info())
-
+    macdonald.get_short_info(macdonald.get_animal_types())
 
 
 
