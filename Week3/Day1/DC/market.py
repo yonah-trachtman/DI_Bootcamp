@@ -62,7 +62,7 @@ class Farm:
         sorted_animals = []
         for animal in self.animals.keys():
             sorted_animals.append(animal)
-            sorted_animals.sort()
+        sorted_animals.sort()
         return sorted_animals
 
     def get_short_info(self, animal_list: list) -> None:
@@ -72,8 +72,7 @@ class Farm:
                     animal_list[i] += "s"
                     i += 1
         for animal in animal_list:
-            print(animal_list.index(animal))
-            print(len(animal_list) - 1)
+
             if animal_list.index(animal) < len(animal_list) - 1:
                 animal_list[animal_list.index(animal)] += ","
         animal_list.insert(-1, "and")

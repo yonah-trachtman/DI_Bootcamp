@@ -30,7 +30,7 @@ class Phone:
     def showCallHistory(self) -> None:
         print(self.callHistory)
 
-    def call(self, otherPhone : Phone, ) -> None:
+    def call(self, otherPhone : Phone) -> None:
         whoCalledWho = f"{self.number} called {otherPhone.number}"
 
         self.callHistory.append(whoCalledWho)
