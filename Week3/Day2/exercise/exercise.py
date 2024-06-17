@@ -65,6 +65,44 @@ class Chartreux(Cat):
 class Siamese(Cat):
     def sing(self, sounds):
         return f'{sounds}'
+    
+
+
+# 🌟 Exercise 2 : Dogs
+# Instructions
+
+#     Create a class called Dog with the following attributes name, age, weight.
+#     Implement the following methods in the Dog class:
+#         bark: returns a string which states: “<dog_name> is barking”.
+#         run_speed: returns the dogs running speed (weight/age*10).
+#         fight : takes a parameter which value is another Dog instance, called other_dog. This method returns a string stating which dog won the fight. The winner should be the dog with the higher run_speed x weight.
+
+#     Create 3 dogs and run them through your class.
+
+
+class Dog:
+    def __init__(self, name: str, age: int|float, weight: int|float) -> None:
+        self.name = name
+        self.age = age
+        self.weight = weight
+
+
+    def bark(self) -> str:
+        return f"{self.name} is barking"
+    
+    def runSpeed(self) -> int|float:
+        return self.weight/self.age*10
+    
+    def fight(self, otherDog):
+        if self.runSpeed() * self.weight >= otherDog.runSpeed() * otherDog.weight:
+            return f"winner is {self.name}"
+        else:
+            return f"winner is {otherDog.name}"
+
+
+
+
+
 
 
 
@@ -78,7 +116,17 @@ def main():
     siamese = Siamese("Siamese", 14)
     allCats = [ bengal, chartreux, siamese]
     sarasPets = Pets(allCats)
+
     sarasPets.walk()
+
+    # exercise2
+    rio = Dog("Rio", 15, 130)
+    jeep = Dog("Jeep", 17, 140)
+    sully = Dog("Sully", 20, 100)
+
+    print(rio.bark())
+    print(jeep.runSpeed())
+    print(sully.fight(rio))
 
 
 if __name__ == "__main__":
