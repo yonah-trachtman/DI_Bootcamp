@@ -98,13 +98,17 @@ def main():
     p = Pagination(alphabetList, 4)
 
     print(p.getVisibleItems())
+    p.nextPage().nextPage()
+    print(p.getVisibleItems())
     p.lastPage()
-    p.nextPage()
     print(p.getVisibleItems())
     p.goToPage(3)
     print(p.getVisibleItems())
+    p.prevPage()
+    print(p.getVisibleItems())
     p.goToPage(0)
     print(p.getVisibleItems())
+    
 
 
 
