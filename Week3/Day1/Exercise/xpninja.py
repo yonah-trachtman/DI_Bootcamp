@@ -30,12 +30,12 @@ class Phone:
     def showCallHistory(self) -> None:
         print(self.callHistory)
 
-    def call(self, otherPhone : Phone) -> None:
+    def call(self, otherPhone) -> None:
         whoCalledWho = f"{self.number} called {otherPhone.number}"
 
         self.callHistory.append(whoCalledWho)
     
-    def sendMessage(self, otherPhone : Phone, content: str) -> None:
+    def sendMessage(self, otherPhone, content: str) -> None:
         message = content
         newMessage = { 
             "from" : self.number, 
