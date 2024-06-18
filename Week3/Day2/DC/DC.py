@@ -57,7 +57,7 @@
 import math
 class Pagination:
 
-    def __init__(self, items: list, pageSize: int = 10) -> None:
+    def __init__(self, items: list = None, pageSize: int = 10) -> None:
         self.items = items
         self.pageSize = pageSize
         self.curentPage = 0
