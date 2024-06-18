@@ -45,6 +45,9 @@
 
 # >>> c1 + c3
 # TypeError: Cannot add between Currency type <dollar> and <shekel>
+import string
+import random
+import datetime
 from math import floor
 from func import addTwoNumber as addTwo
 
@@ -88,6 +91,28 @@ class Currency:
             self.amount += other
             return self
         
+
+# 🌟 Exercise 3: String module
+# Instructions
+
+#     Generate random String of length 5
+#     Note: String must be the combination of the UPPER case and lower case letters only. No numbers and a special symbol.
+#     Hint: use the string module
+
+
+# 🌟 Exercise 4 : Current Date
+# Instructions
+
+#     Create a function that displays the current date.
+#     Hint : Use the datetime module.
+
+
+def rightNow() -> None:
+    print(datetime.datetime.now())
+
+
+
+        
     
 
 
@@ -115,6 +140,10 @@ def main():
     number = 12453124124
 
     print(addTwo(number))
+
+    print(''.join(random.choices(string.ascii_letters, k=5)))
+
+    rightNow()
 
 
 if __name__ == "__main__":
