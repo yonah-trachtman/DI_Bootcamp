@@ -50,6 +50,7 @@ import random
 import datetime
 from math import floor
 from func import addTwoNumber as addTwo
+# import faker
 
 
 
@@ -108,7 +109,40 @@ class Currency:
 
 
 def rightNow() -> None:
-    print(datetime.datetime.now())
+    print(datetime.datetime.now().replace(microsecond=0))
+
+
+# Exercise 5 : Amount of time left until January 1st
+# Instructions
+
+#     Create a function that displays the amount of time left from now until January 1st.
+#     (Example: the 1st of January is in 10 days and 10:34:01hours).
+
+def timeToJanFirst() -> None:
+    janFirst = datetime.datetime(2025, 1, 1, 0, 0, 0)
+    timeLeft = janFirst - datetime.datetime.now().replace(microsecond=0)
+    print(f"the 1st of January is in {timeLeft} minutes")
+
+
+#     Exercise 6 : Birthday and minutes
+# Instructions
+
+#     Create a function that accepts a birthdate as an argument (in the format of your choice), then displays a message stating how many minutes the user lived in his life.
+
+def minutesLived(birthday: "datetime") -> None:
+    lifeLived = datetime.datetime.now().replace(microsecond=0) - birthday
+    print(lifeLived.min)
+
+
+
+# Exercise 7 : Faker Module
+# Instructions
+
+#     Install the faker module, and take a look at the documentation and learn how to properly implement faker in your code.
+#     Create an empty list called users. Tip: It should be a list of dictionaries.
+#     Create a function that adds new dictionaries to the users list. Each user has the following keys: name, adress, langage_code. Use faker to populate them with fake data.
+
+
 
 
 
@@ -139,11 +173,15 @@ def main():
 
     number = 12453124124
 
-    print(addTwo(number))
+    print(addTwo(number, 2))
 
     print(''.join(random.choices(string.ascii_letters, k=5)))
 
     rightNow()
+
+    timeToJanFirst()
+
+    minutesLived(datetime.datetime(2025, 1, 1, 0, 0, 0))
 
 
 if __name__ == "__main__":

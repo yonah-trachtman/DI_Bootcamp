@@ -21,6 +21,6 @@
 # import module_name as mn
 
 
-def addTwoNumber(number: int|float) -> int|float:
-    number += 2
-    return number
+def addTwoNumber(number: int|float, number2: int|float) -> int|float:
+    return number + number2
+     
