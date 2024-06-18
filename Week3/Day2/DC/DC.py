@@ -71,7 +71,7 @@ class Pagination:
         return self
 
     def nextPage(self) -> "Pagination":
-        if self.curentPage < len(self.items) % self.pageSize:
+        if self.curentPage < math.floor(len(self.items)) / self.pageSize:
             self.curentPage += 1
         return self
         
@@ -105,6 +105,8 @@ def main():
     p.goToPage(3)
     print(p.getVisibleItems())
     p.prevPage()
+    print(p.getVisibleItems())
+    p.nextPage().nextPage()
     print(p.getVisibleItems())
     p.goToPage(0)
     print(p.getVisibleItems())
