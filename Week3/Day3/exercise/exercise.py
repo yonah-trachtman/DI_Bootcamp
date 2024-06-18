@@ -50,7 +50,8 @@ import random
 import datetime
 from math import floor
 from func import addTwoNumber as addTwo
-# import faker
+from faker import Faker
+fake = Faker()
 
 
 
@@ -131,7 +132,8 @@ def timeToJanFirst() -> None:
 
 def minutesLived(birthday: "datetime") -> None:
     lifeLived = datetime.datetime.now().replace(microsecond=0) - birthday
-    print(lifeLived.min)
+    minutes = int(lifeLived.total_seconds() / 60)
+    print(f"you've lived {minutes} minutes")
 
 
 
@@ -151,6 +153,8 @@ def minutesLived(birthday: "datetime") -> None:
 
 
 def main():
+    def addFaker():
+        users.append(dict(name = fake.name(), address = fake.address(), langage_code = fake.language_code()))
 
     
     c1 = Currency('dollar', 5)
@@ -181,7 +185,13 @@ def main():
 
     timeToJanFirst()
 
-    minutesLived(datetime.datetime(2025, 1, 1, 0, 0, 0))
+    minutesLived(datetime.datetime(1998, 7, 30, 0, 0, 0))
+
+    users = []
+    addFaker()
+    addFaker()
+    print(users)
+    
 
 
 if __name__ == "__main__":
