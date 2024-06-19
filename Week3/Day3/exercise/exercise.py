@@ -190,7 +190,8 @@ def main():
     users = []
     addFaker()
     addFaker()
-    print(users)
+    for user in users:
+        print(user)
     
 
 
