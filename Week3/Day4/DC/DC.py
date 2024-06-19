@@ -16,17 +16,9 @@
 #         a method that returns a list of all the unique words in the text.
 
 
-# Part II
-
-# Then, we will analyze a text coming from an external text file. Download the_stranger.txt file.
-
-#     Implement a classmethod that returns a Text instance but with a text file:
-
-#         >>> Text.from_file('the_stranger.txt')
-
-#     Hint: You need to open and read the text from the text file.
-
-#     Now, use the provided the_stranger.txt file and try using the class you created above.
+import os
+import json
+from collections import Counter
 class Text():
     def __init__(self, strText: str) -> None:
         self.strText = strText
@@ -41,13 +33,8 @@ class Text():
 
 
     def mostCommon(self) -> str:
-        wordDict = {}
         listOfWords = self.strText.split()
-        for word in listOfWords:
-            if word in wordDict.keys():
-                wordDict[word] += 1
-            else:
-                wordDict[word] = 1
+        wordDict = Counter(listOfWords)
         commonWord = max(wordDict.values())
         for key in wordDict.keys():
             if wordDict[key] == commonWord:
@@ -63,16 +50,50 @@ class Text():
             else:
                 continue
         return newList
+    
+
+    @classmethod  
+    def fromFile(cls, fileName):
+        with open(fileName, mode = 'r') as file:
+            textFile = file.read()
+            return cls(textFile)
+           
+        
+    def to_upper(self): 
+        return self.txtStr.upper()
+    
 
 
+# Part II
 
+# Then, we will analyze a text coming from an external text file. Download the_stranger.txt file.
+
+#     Implement a classmethod that returns a Text instance but with a text file:
+
+#         >>> Text.from_file('the_stranger.txt')
+
+#     Hint: You need to open and read the text from the text file.
+
+#     Now, use the provided the_stranger.txt file and try using the class you created above.
+
+dirPath = os.path.dirname(os.path.realpath(__file__))
+
+contentFile = dirPath + "//the_stranger.txt"
+
+
+    
+    
 
 def main():
     txt = Text("this word might not have apeared in this text but don't give up hope in finding what you seek")
     print(txt.everyWord())
     print(txt.mostCommon())
     print(txt.howOften("this"))
-
+    txt2 = Text.fromFile(contentFile)
+    print(txt2.mostCommon())
+    print(txt2.everyWord())
+    print(txt2.howOften("Oblong"))
+    
 
 
 

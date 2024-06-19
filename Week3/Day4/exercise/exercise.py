@@ -31,6 +31,7 @@ dirPath = os.path.dirname(os.path.realpath(__file__))
 
 contentFile = dirPath + "//wordlist.txt"
 contents = ""
+
 def getWordsFromFile(content) -> list:
     with open(content) as file:
         contents = file.read()
