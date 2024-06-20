@@ -26,7 +26,7 @@ while isRunning:
         if userInput == "X":
             break
         elif fileOfWords.isValidWord(userInput):
-            print (f"{userInput.lower().capitalize()} had {len(fileOfWords.getAnigrams(userInput))} anagrams here they are\n {' '.join(fileOfWords.getAnigrams(userInput))} ")
+            print (f"{userInput.lower().capitalize()} had {len(fileOfWords.getAnigrams(userInput))} anagrams here they are\n {' '.join(fileOfWords.getAnigrams(userInput)).lower()} ")
         else:
             print("sorry that word is not in our dictionary")
             
