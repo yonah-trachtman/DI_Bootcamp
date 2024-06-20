@@ -1,0 +1,9 @@
+
+    What is a class? : Code used for creating objects, they also contain methods for specific use with objects of that class
+    What is an instance? : It's a variable that's an object of a single class
+    What is encapsulation? : wraping data and code that works with that data in a single unit
+    What is abstraction? : simplifying complex concepts and focus on essental details
+    What is inheritance? : one object or class or other similer thing that gains the attributes from a source like a different class
+    What is multiple inheritance? : inheritance from multiple sources
+    What is polymorphism? : something apearing in multiple forms
+    What is method resolution order or MRO? : the order in which a method is searched for in a classes hierarchy
