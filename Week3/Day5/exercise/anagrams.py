@@ -11,8 +11,24 @@
 #         Once your code has decided that the user’s input is valid, it should find out the following:
 #             All possible anagrams to the user’s word.
 #             Create an AnagramChecker instance and apply it to the steps created above.
-#             Display the information about the word in a user-friendly, nicely-formatted message such as: 
+#             Display the information about the word in a user-friendly, nicely-formatted message. 
 
 
-import anagram_checker
+from anagram_checker import fileOfWords
 
+isRunning = True
+while isRunning:
+
+    userInput = input("welcome to the anagram checker to check the anagrams of a single word please type it in or, to exit input 'X': ")
+    userInput.strip()
+    if userInput.isalpha():
+        userInput = userInput.upper()
+        if userInput == "X":
+            break
+        elif fileOfWords.isValidWord(userInput):
+            print (f"{userInput.lower().capitalize()} had {len(fileOfWords.getAnigrams(userInput))} anagrams here they are\n {' '.join(fileOfWords.getAnigrams(userInput))} ")
+        else:
+            print("sorry that word is not in our dictionary")
+            
+    else:
+        print("sorry that's not a single word")

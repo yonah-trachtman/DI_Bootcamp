@@ -23,12 +23,10 @@
 
 
 import os
-import random
 
 dirPath = os.path.dirname(os.path.realpath(__file__))
 
 contentFile = dirPath + "//sowpods.txt"
-contents = ""
 
 class AnagramChecker():
     def __init__(self, file) -> None:
@@ -50,7 +48,7 @@ class AnagramChecker():
         return listOfAnograms
 
 
-def isAnagram( word1:str,word2:str) -> bool:
+def isAnagram(word1:str,word2:str) -> bool:
         if sorted(word1.upper()) == sorted(word2.upper()):
             return word2
 
@@ -63,6 +61,3 @@ def isAnagram( word1:str,word2:str) -> bool:
 
 
 fileOfWords = AnagramChecker(contentFile)
-
-
-print(fileOfWords.getAnigrams("meat"))
