@@ -57,9 +57,14 @@
 
 # Code starts here!!!!
 sampleMatrix = [
-    ["7", "T", "h", "i", "s", "$", "#", "^"],
-    ["i", "s", "%", " ", "M", "a", "t", "r"],
-    ["i", "x", "?", "#", " ", " ", "%", "!"]]
+  ["7","i","i"],
+  ["T","s","x"],
+  ["h","%","?"],
+  ["i"," ","#"],
+  ["s","M"," "],
+  ["$","a"," "],
+  ["#","t","%"],
+  ["^","r","!"]]
 
 
 
@@ -69,19 +74,19 @@ sampleMatrix = [
 
 
 def matrixSolve(matrix):
-    prev = 0
+    flag = 1
     message = []
-    for column in matrix:
-        for i, ele in enumerate(column):
-            if ele.isalpha() == True:
-                message.append(ele)
-            elif column.index(ele) == 0:
-                continue
-            elif message[prev - 1] == " ":
-                continue
-            else:
+    currentIndex = 0
+    while currentIndex < 3:
+        for column in matrix:
+            if column[currentIndex].isalpha() == True:
+                message.append(column[currentIndex])
+                flag = 0
+            elif flag == 0:
                 message.append(" ")
-            prev += 1
+                flag = 1
+            if sampleMatrix.index(column) == len(sampleMatrix) - 1:
+                currentIndex += 1
     decoded = "".join(message)
     print(decoded.strip())
 
