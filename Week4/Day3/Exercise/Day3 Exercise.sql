@@ -151,12 +151,13 @@
 
 -- select film.title, film.description, rental.rental_date, rental.return_date
 -- from film
--- join inventory on film.film_id = inventory.film_id
--- join rental on rental.inventory_id = inventory.inventory_id
--- join customer on customer.customer_id = rental.customer_id
+-- inner join inventory on film.film_id = inventory.film_id
+-- inner join rental on rental.inventory_id = inventory.inventory_id
+-- inner join customer on customer.customer_id = rental.customer_id
 -- where customer.first_name = 'Matthew' 
 -- and customer.last_name = 'Mahan'
--- AND rental.return_date BETWEEN '2005-07-28 00:00:00' AND '2005-08-01 23:59:59'
+-- AND rental.return_date > '2005-07-28'  
+-- AND rental.return_date < '2005-08-01'
 -- AND film.rental_rate > 4.00
 
 --         The 4th film : His friend Matthew Mahan watched this film, as well. It had the word “boat” in the title or description, and it looked like it was a very expensive DVD to replace.
