@@ -37,3 +37,30 @@ const allBooks = [{title: "Going Postal",
 //             Example: HarryPotter written by JKRolling.
 //             The width of the image has to be set to 100px.
 //             If the book is already read. Set the color of the book’s details to red.
+
+const bookList = document.getElementsByClassName("listBooks")
+let book1 = document.createElement("div");
+let book2 = document.createElement("div");
+
+
+for (let index = 0; index < allBooks.length; index++) {
+
+    let bookTitle = document.createElement("p");
+    bookTitle.innerText = allBooks[index]["title"]
+    let bookAuther = document.createElement("p");
+    bookAuther.innerText = allBooks[index]["author"]
+    let bookImg = document.createElement("img")
+    bookImg.src = allBooks[index]["image"]
+    bookImg.style.width = "100px"
+    if (allBooks[index]["alreadyRead"] == true){
+        bookTitle.style.color = "red"
+        bookAuther.style.color = "red"
+    }
+    if (index == 0) {
+        book1.append(bookTitle, bookAuther, bookImg)
+    } else {
+        book2.append(bookTitle, bookAuther, bookImg)
+    }
+}
+
+bookList[0].append(book1, book2)
