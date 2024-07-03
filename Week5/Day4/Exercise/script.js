@@ -51,7 +51,7 @@ function bold() {
 
 
 //     Retrieve the form and console.log it.
-const form = document.getElementsByClassName("form");
+const form = document.getElementsByTagName("form");
 console.log(form);
 //     Retrieve the inputs by their id and console.log them.
 const fname = document.getElementById("fname")
@@ -59,14 +59,41 @@ const lname = document.getElementById("lname")
 const submit = document.getElementById("submit")
 console.log(fname, lname, submit);
 //     Retrieve the inputs by their name attribute and console.log them.
-
+const firstname = document.getElementById("fname").name
+const lastname = document.getElementById("lname").name
+console.log(firstname, lastname);
 //     When the user submits the form (ie. submit event listener)
 //         use event.preventDefault(), why ?
 //         get the values of the input tags,
 //         make sure that they are not empty,
 //         create an li per input value,
 //         then append them to a the <ul class="usersAnswer"></ul>, below the form.
+function formsubmit(e) {
+  e.preventDefault();
+  let ul = document.getElementsByClassName("usersAnswer")
+  let firstValue = document.createElement("li");
+  let lastValue = document.createElement("li");
+  if(fname.value.trim() === ""){
+    alert('Please put a valid first name');
+  } else {
+    fname.value.trim()
+    let ftext = document.createTextNode(fname.value);
+    firstValue.appendChild(ftext);
+  }
+  if(fname.value.trim() === ""){
+    alert('Please put a valid first name');
+  } else {
+    lname.value.trim()
+    let ltext = document.createTextNode(lname.value);
+    lastValue.appendChild(ltext);
+  }
+  console.log(e.target.elements["fname"].value, e.target.elements["lname"].value)
 
+  ul[0].append(firstValue, lastValue)
+
+}
+
+form[0].addEventListener("submit", formsubmit, false)
 // The output should be :
 
 // <ul class="usersAnswer">
@@ -80,50 +107,48 @@ console.log(fname, lname, submit);
 
 // Add this sentence to your HTML file then follow the steps :
 
-// <p><strong>Hello</strong> I hope you are enjoying <strong>this</strong> class. At the
-// <strong>end</strong> you <strong>will</strong> be great Developers!
-// <strong>Enjoy</strong> the <strong>JavaScript </strong> lessons</p>
+
 
 
 // In the JS file:
 
 //     Declare a global variable named allBoldItems.
+let items = document.getElementsByTagName("strong")
+const allBoldItems = []
 
 //     Create a function called getBoldItems() that takes no parameter. This function should collect all the bold items inside the paragraph and assign them to the allBoldItems variable.
+function getBoldItems() {
+    
+    for (let index = 0; index < items.length; index++) {
+        allBoldItems.push(items[index])
+        
+    }
+    console.log(allBoldItems)
+}
 
+getBoldItems()
 //     Create a function called highlight() that changes the color of all the bold text to blue.
+function highlight() {
+    for (let index = 0; index < allBoldItems.length; index++) {
+        allBoldItems[index].style.color = "blue"
+        
+    }
+}
+
 
 //     Create a function called returnItemsToDefault() that changes the color of all the bold text back to black.
+function returnItemsToDefault() {
+    for (let index = 0; index < allBoldItems.length; index++) {
+        allBoldItems[index].style.color = "black"
+        
+    }
+}
 
 //     Call the function highlight() on mouseover (ie. when the mouse pointer is moved onto the paragraph), and the function returnItemsToDefault() on mouseout (ie. when the mouse pointer is moved out of the paragraph). Look at this example
 
+const p = document.getElementsByTagName("p")
+const lastp  = p[p.length-1]
 
-// 🌟 Exercice 4 : Volume of a sphere
-// Instructions
 
-//     Write a JavaScript program to calculate the volume of a sphere. Use the code below as a base:
-
-// <!doctype html> 
-// <html lang="en"> 
-//     <head> 
-//         <meta charset="utf-8"> 
-//         <title>Volume of a Sphere</title> 
-//         <style>  
-//             body {
-//                 padding-top:30px;
-//             } 
-
-//             label,input {
-//                 display:block;
-//             }  
-//         </style> 
-//     </head> 
-//     <body> 
-//         <p>Input radius value and get the volume of a sphere.</p> 
-//         <form  id="MyForm"> 
-//             <label for="radius">Radius</label><input type="text" name="radius" id="radius" required> 
-//             <label for="volume">Volume</label><input type="text" name="volume" id="volume"> 
-//             <input type="submit" value="Calculate" id="submit">    
-//         </form> 
-//     </body> 
-// </html> 
+lastp.addEventListener("mouseover", highlight)
+lastp.addEventListener("mouseout", returnItemsToDefault)
