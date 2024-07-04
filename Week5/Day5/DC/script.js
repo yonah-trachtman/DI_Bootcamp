@@ -11,6 +11,7 @@
 //         Create an empty array : const tasks = [];
 
 const tasks = [];
+let currentId = 0
 const form = document.getElementsByClassName("addtask")
 const formInput = document.getElementById("newTask")
 const tasklist = document.getElementsByClassName("list")
@@ -26,10 +27,14 @@ const clear = document.getElementsByClassName("clear")
 function addTask(e) {
     e.preventDefault()
     let newTask;
+    let taskObj
+    while(true){
     if(formInput.value.trim() === ""){
         alert('Please put a valid input');
+        break
       } else {
         newTask = formInput.value.trim()
+        taskObj = generateTask(newTask)
         let newTaskContainer = document.createElement("div")
         newTaskContainer.classList.add("listTasks")
         const x = document.createElement("div")
@@ -37,10 +42,12 @@ function addTask(e) {
         newTaskContainer.append(x)
         const check = document.createElement("INPUT");
         check.setAttribute("type", "checkbox");
+        check.addEventListener("click", function() {markDone(taskObj.id)})
         newTaskContainer.append(check)
         const para = document.createElement("p");
-        para.innerText = newTask
+        para.innerText = taskObj.text
         newTaskContainer.append(para)
+        newTaskContainer.dataset.id = taskObj.id
         tasks.unshift(newTaskContainer)
         x.addEventListener("click", function () {
             let self = tasks.indexOf(newTaskContainer)
@@ -48,7 +55,8 @@ function addTask(e) {
             newTaskContainer.remove()
         })
         render(1)
-      }
+        break
+      }}
 
 }
 function render(i) {
@@ -75,6 +83,22 @@ clear[0].addEventListener("click",function () {
     
 })
 
+
+function generateTask(text) {
+    const task = {
+        text: text,
+        id: currentId,
+        done: false
+    }
+    currentId++
+    return task
+}
+
+
+function markDone(id) {
+   const div = document.querySelector(`[data-id="${id}"]`)
+   div.classList.toggle("isdone")
+}
 
 // BONUS I (not mandatory):
 
