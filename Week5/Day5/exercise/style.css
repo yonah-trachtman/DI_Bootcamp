@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+#colors {
+    background-color: #A9A9A9;
+    height: 100%;
+    width: 25%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+#btn {
+    grid-column: 1 / -1;
+    height: 10vh;
+    border-radius: 10px;
+    font-size: 5vh;
+}
+
+.palet {
+    border: 0.1vw solid black;
+    height: 10vh;
+    width: 7vw;
+    margin: 5%;
+}
+
+
+
+#canvas{ 
+    display: grid;
+    width: 75%;
+    grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(40, 1fr);
+    height: 100vh;
+}
+
+
+.cell{
+    border: 0.1vw solid black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
