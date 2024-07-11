@@ -1,0 +1,37 @@
+What you will create
+
+A Robo-Friends Search with Advanced Javascript
+
+In this project you will have to create a robot website (you can use your own css to style your project):
+robot project #1
+
+
+Instructions
+PART I : The website
+
+    The webpage displays Cards of Robots with their respective image and information.
+
+    robot project #1
+
+
+
+2. You have to create the cards by using the values from the array of objects provided in the ASSETS below.
+
+PART II : The filter
+
+    When you search for a specific name in the search box, the webpage filters the cards displayed. For example is you write “nic” in the search box, you will display the robot which name contains “nic”, which means only one robot: “Nicholas”.
+    robot project #2
+
+
+
+2. Display the cards in the DOM, using DOM elements and selectors, and filter them with the search box.
+
+PART II : The style
+
+    You can use your own images or use this website to generate a new Robot Image.
+
+    Check out those links to generate the correct font
+        cdnfonts
+        dafont
+
+    You can use those images for the background (click righ on the images below, and “Save image as…” )
