@@ -100,7 +100,8 @@ const morse = `{
   "/": "-..-.",
   "@": ".--.-.",
   "(": "-.--.",
-  ")": "-.--.-"
+  ")": "-.--.-",
+  " ": "/"
 }`
 
 //     Create three functions. The two first functions should return a promise..
