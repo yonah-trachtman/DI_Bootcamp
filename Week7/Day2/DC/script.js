@@ -12,13 +12,14 @@
 const deleteAll = document.getElementById("DELETEAll");
 const finder = document.getElementById("gifFinder");
 const category = document.getElementById("category");
-let idnumber = 0
+let idnumber = 1
 
 
 async function appendGif(e) {
     e.preventDefault();
     const currentid = idnumber.toString();
-    let randomGif = await fetch(`https://api.giphy.com/v1/gifs/random?tag=${category.value}&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`);
+    try {
+        let randomGif = await fetch(`https://api.giphy.com/v1/gifs/random?tag=${category.value}&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`);
     let data = await randomGif.json();
     const div = document.createElement("div");
     div.id = currentid;
@@ -35,10 +36,15 @@ async function appendGif(e) {
     div.append(img, del);
     document.body.appendChild(div);
     idnumber++
+      }
+      catch(err) {
+        console.log(err)
+      }
+    
 }
 
 
-finder.addEventListener("click", function(e) {
+finder.addEventListener("submit", function(e) {
     appendGif(e)
 })
 
