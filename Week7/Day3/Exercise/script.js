@@ -23,6 +23,14 @@ function errorFunction() {
     homeWorld.innerText = ''
 }
 
+function updateFunction(data, planetData) {
+    names.innerText = `Name: ${data.result.properties.name}`
+    height.innerText = `Height: ${data.result.properties.height}`
+    gender.innerText = `Gender: ${data.result.properties.gender}`
+    birthYear.innerText = `Birth Year: ${data.result.properties.birth_year}`
+    homeWorld.innerText = `Homeworld: ${planetData.result.properties.name}`
+}
+
 async function getText(file) {
     updateWithLoading();
     try {
@@ -35,12 +43,8 @@ async function getText(file) {
         if (!planet.ok) { 
             throw new Error('Network response was not ok');
         }
-        let planetData = await planet.json();   
-        names.innerText = `Name: ${data.result.properties.name}`
-        height.innerText = `Height: ${data.result.properties.height}`
-        gender.innerText = `Gender: ${data.result.properties.gender}`
-        birthYear.innerText = `Birth Year: ${data.result.properties.birth_year}`
-        homeWorld.innerText = `Homeworld: ${planetData.result.properties.name}`
+        let planetData = await planet.json();
+        updateFunction(data, planetData)   
     } catch (error) {
         errorFunction()
     }
