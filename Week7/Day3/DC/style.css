@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0%;
+    height: 100vh;
+}
+
+#outerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+#conversionResult {
+    align-self: center;
+    background-color: lightgray;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
