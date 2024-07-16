@@ -23,7 +23,7 @@ function errorFunction() {
     homeWorld.innerText = ''
 }
 
-function updateFunction(data, planetData) {
+function updateCharacterData(data, planetData) {
     names.innerText = `Name: ${data.result.properties.name}`
     height.innerText = `Height: ${data.result.properties.height}`
     gender.innerText = `Gender: ${data.result.properties.gender}`
@@ -44,7 +44,7 @@ async function getText(file) {
             throw new Error('Network response was not ok');
         }
         let planetData = await planet.json();
-        updateFunction(data, planetData)   
+        updateCharacterData(data, planetData)   
     } catch (error) {
         errorFunction()
     }
