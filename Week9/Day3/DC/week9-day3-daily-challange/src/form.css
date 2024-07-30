@@ -1,0 +1,15 @@
+.header {
+    background-color: black;
+    color: white;
+}
+
+.form {
+    background-color: orange;
+    margin-bottom: 1%;
+}
+
+
+.info {
+    background-color: green;
+    color: white;
+}
