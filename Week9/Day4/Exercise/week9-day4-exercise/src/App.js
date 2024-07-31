@@ -14,13 +14,13 @@ import data from "./componants/test.json";
 
 
 function App() {
-  const info = [{
+  const info = {
     key1: 'myusername',
     email: 'mymail@gmail.com',
     name: 'Isaac',
     lastname: 'Doe',
     age: 27
-  }]
+  }
 
   const add = async () => {
 
