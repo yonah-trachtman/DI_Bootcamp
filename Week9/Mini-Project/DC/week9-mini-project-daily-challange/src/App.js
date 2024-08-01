@@ -64,7 +64,7 @@ function App() {
       <option value="Times">Times</option>
       <option value="Divide">Divide</option>
       </select>
-      <button onClick={getFinal}>Add Numbers</button>
+      <button onClick={getFinal}>Calculate</button>
       <h1>{sum}</h1>
     </div>
   );
