@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import quotes from './Server/RandomQuotesProject-JSBOOTCAMP-Week8Day5-main/QuotesDatabase';
 import React, { useState, useEffect } from 'react'; 
-import QuotesBox from './Componants/QuoteBox';
 
 
 
