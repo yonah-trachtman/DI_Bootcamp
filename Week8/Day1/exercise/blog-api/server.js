@@ -8,8 +8,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`run on ${process.env.PORT || 3000}`);
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`run on ${process.env.PORT || 5000}`);
 });
 
 
