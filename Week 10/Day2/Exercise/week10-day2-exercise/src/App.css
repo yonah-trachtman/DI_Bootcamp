@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+.completed {
+  text-decoration: line-through;
+}
+
+button {
+  height: 2vh;
+  width: 5vw;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
