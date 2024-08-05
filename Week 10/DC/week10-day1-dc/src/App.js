@@ -26,7 +26,7 @@ function TodoList() {
   const [todoText, setTodoText] = useState("");
   const [editingTodo, setEditingTodo] = useState(null);
   const [editText, setEditText] = useState("");
-  const [filter, setFilter] = useState("all"); // "all", "completed", "not-completed"
+  const [filter, setFilter] = useState("all"); 
 
   const handleAddTodo = () => {
     if (todoText.trim() === "") return;
@@ -66,7 +66,7 @@ function TodoList() {
   const filteredTodos = todos.filter(todo => {
     if (filter === "completed") return todo.completed;
     if (filter === "not-completed") return !todo.completed;
-    return true; // "all"
+    return true;
   });
 
   return (
