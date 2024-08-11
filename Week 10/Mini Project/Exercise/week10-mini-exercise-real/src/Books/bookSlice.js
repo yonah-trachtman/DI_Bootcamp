@@ -47,6 +47,6 @@ export const error = (state) => state.booksReducer.error
 export const genre = (state) => state.booksReducer.genre
 export const state = (state) => state.booksReducer;
 
-  export const { addReaction, filterGenre } = bookSlice.actions;
+  export const { filterGenre } = bookSlice.actions;
 
   export default bookSlice.reducer;
