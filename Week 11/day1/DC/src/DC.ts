@@ -1,15 +1,15 @@
 let processInput  = (input: number | string | boolean) => {
     if (typeof input === "number") {
-        console.log(input * input)
+        return input * input
     } else if (typeof input === "string") {
-        console.log(input.toUpperCase())
+        return input.toUpperCase()
     } else {
-        console.log(!input)
+        return !input
     }
 }
 
 
-processInput(12)
-processInput("hello world")
-processInput(true)
-processInput(false)
+console.log(processInput(12))
+console.log(processInput("hello world"))
+console.log(processInput(true))
+console.log(processInput(false))
