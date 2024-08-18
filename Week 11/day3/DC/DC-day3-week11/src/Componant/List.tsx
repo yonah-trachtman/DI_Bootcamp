@@ -1,4 +1,5 @@
 import React from 'react';
+import "../App.css"
 
 export type Todo = {
     id: number;
@@ -13,9 +14,9 @@ type ListProps<T> = {
 
 function List<T>({ items, renderItem }: ListProps<T>) {
   return (
-    <ul>
+    <ul className='list'>
       {items.map((item, index) => (
-        <li key={index}>{renderItem(item)}</li>
+        <li className='listItem' key={index}>{renderItem(item)}</li>
       ))}
     </ul>
   );

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import './App.css'
 import List from './Componant/List'
 
@@ -8,25 +8,30 @@ function App() {
     { id: 1, text: 'Learn TypeScript' },
     { id: 2, text: 'Build a React App' },
   ]);
-  const [inputValue, setInputValue] = useState('');
+  const inputRef = useRef<HTMLInputElement>(null!)
 
   const addTodo = () => {
     const newTodo: Todo = {
       id: todos.length + 1,
-      text: `${inputValue}`,
+      text: `${inputRef.current.value}`,
     };
     setTodos([...todos, newTodo]);
+    inputRef.current.value = ""
   };
 
   return (
     <div>
-      <h1>Todo List</h1>
+      <h1>To do List</h1>
       <input
+      placeholder='what would you like to do?'
+      className='textInput'
         type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        ref={inputRef}
+        // onChange={(e) => {
+        //   setInputValue(e.target.value)
+        // }}
       />
-      <button onClick={addTodo}>Add Todo</button>
+      <button onClick={addTodo} className='CTA'>Add to list</button>
       <List
         items={todos}
         renderItem={(todo) => (
